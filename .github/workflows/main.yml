@@ -1,0 +1,16 @@
+name: GitHub Actions Practice
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify workflow
+        run: echo "GitHub Actions workflow executed successfully!"
